@@ -1,0 +1,238 @@
+/*
+  Profile Switching Module
+  Author: Ricardo Santos
+*/
+
+/*General*/
+html{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container .title h3{
+  color: #CCC;
+  font-weight: 300;
+  text-align: center;
+}
+
+.header{
+  width: 100%;
+  height: 80px;
+  background: #FFF;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 33px -9px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 0px 33px -9px rgba(0,0,0,0.33);
+  box-shadow: 0px 0px 33px -9px rgba(0,0,0,0.33);
+}
+
+.logo{
+  display: inline-block;
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  color: #d89f52;
+}
+
+.logo i{
+  font-size: 50px;
+}
+/*End General*/
+
+
+/*Profile Switching Component*/
+.profile-switching-module{
+  position: relative;
+  float: right;
+  display: block;
+  min-height: 100%;
+  height: 100%;
+  border-left: 1px solid #FFF;
+}
+
+.open{
+  width: 260px;
+  border-left: 1px solid #dcdcdc;
+  transition: width 0.3s ease-in-out;
+}
+
+/*Active User*/
+.active-user{
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px 10px 15px;
+}
+
+.active-user-image{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 47px;
+  height: 47px;
+  border-radius: 30px;
+  background: #EEEEEE;
+  background: url(../../img/profile1.png);
+  background-size: cover;
+  cursor: pointer;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.active-user .user-info{
+  display: none;
+}
+
+.active-user .actions{
+  display: none;
+}
+
+.open .user-info{
+ display: block;
+ width: 165px;
+ overflow: hidden;
+}
+
+.open .actions{
+  display: block;
+  margin-top: 5px;
+}
+
+.open .active-user .actions a{
+  color: #b9b9b9;
+} 
+
+.open .active-user .actions a:hover{
+  color: #000;
+} 
+
+.active-user .actions i{
+  margin-right: 5px;
+}
+
+.open .active-user .logout, .open .active-user .account-settings {
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.active-user .user-name{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #F7715D;
+}
+/*End - Active User*/
+
+/*Other Accounts*/
+.other-accounts{
+  display: block;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 260px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.3);
+}
+
+.open .other-accounts{
+  transition: all 0.3s ease-in-out;
+  display: block;
+  height: auto;
+  opacity: 1;
+}
+
+.other-accounts ul{
+  margin: 0;
+}
+
+.other-accounts ul li{
+  cursor: pointer;
+}
+
+.open .other-accounts ul{
+  list-style: none;
+  padding-left: 0;
+}
+
+.open .other-accounts ul li{
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.open .other-accounts ul li:hover{
+  background: #f7715d;
+}
+
+.open .other-accounts ul li:hover .user-name{
+  color: white;
+}
+
+.open .other-accounts ul li:first-child{
+  overflow: hidden;
+}
+
+.open .other-accounts ul li{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.open .other-accounts .user-info{
+  display: block;
+  padding-left: 15px;
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.other-accounts .user-info .user-name{
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.open .other-accounts .profile-image{
+  margin-left: auto;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.open .other-accounts .account-1 .profile-image{
+  background: url('../../img/profile2.png');
+  background-size: cover;
+}
+
+.open .other-accounts .account-2 .profile-image{
+  background: url('../../img/profile5.png');
+  background-size: cover;
+}
+
+.open .other-accounts .account-3{
+  height: 20px;
+  background: #EEE;
+}
+
+.open .other-accounts .account-3 .user-info{
+  padding: 0;
+  width: 100%;
+}
+
+.open .other-accounts .account-3 .user-info .user-name{
+  text-align: center;
+}
+
+
+/*End - Other Accounts*/
